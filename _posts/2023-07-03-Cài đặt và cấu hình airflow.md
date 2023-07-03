@@ -17,8 +17,6 @@ docker compose up airflow-init
 Bây giờ cần viết các dags để chạy jobs. Ở đây mình sẽ sử dụng python để viết dags. \
 Các dags sẽ đặt ở trong thư mục dags
 
-####
-
 ```bash
 from airflow import DAG
 from config.notify import send_telegram
@@ -58,7 +56,7 @@ tasknotify = send_telegram(dag,dag.dag_id)
 task1 >> task2 >> tasknotify
 ```
 
-> ở đây sẽ có 2 task chạy cùng 1 dag và sẽ báo lỗi về chat bot cảu telegram khi có lỗi 
+> ở đây sẽ có 2 task chạy cùng 1 dag và sẽ báo lỗi về chat bot của telegram khi có lỗi 
 
 Module default
 
@@ -81,33 +79,6 @@ from airflow.contrib.operators.ssh_operator import SSHOperator
 
 import paramiko
 
-def create_ssh_operator_104(task_id, command, dag):
-    return SSHOperator(
-        task_id=task_id,
-        ssh_conn_id='ssh_conn_104',
-        cmd_timeout=7200,
-        command=command,
-        dag=dag
-    )
-
-def create_ssh_operator_20(task_id, command, dag):
-    return SSHOperator(
-        task_id=task_id,
-        ssh_conn_id='ssh_conn_20',
-        cmd_timeout=7200,
-        command=command,
-        dag=dag
-    )
-
-def create_ssh_operator_26(task_id, command, dag):
-    return SSHOperator(
-        task_id=task_id,
-        ssh_conn_id='ssh_conn_26',
-        cmd_timeout=7200,
-        command=command,
-        dag=dag
-    )
-
 def create_ssh_operator_62(task_id, command, dag):
     return SSHOperator(
         task_id=task_id,
@@ -117,59 +88,6 @@ def create_ssh_operator_62(task_id, command, dag):
         dag=dag
     )
 
-
-def execute_remote_command(jump_hook,remote_hook, command):
-    jump_conn = jump_hook.get_conn()
-    transport = jump_conn.get_transport()
-    # Thực hiện kết nối SSH từ jump host đến remote host
-    remote_conn = transport.open_channel("direct-tcpip", (remote_hook.remote_host, remote_hook.port), (jump_hook.remote_host, jump_hook.port))
-    # Sử dụng paramiko để thực hiện lệnh từ xa trên remote host
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(hostname=remote_hook.remote_host, port=remote_hook.port, username=remote_hook.username, password=remote_hook.password, sock=remote_conn)
-    stdin, stdout, stderr = client.exec_command(command)
-    error = stderr.read().decode().strip()
-    print("ERROR:", error)
-    # if error:
-    #     raise ValueError('Remote task failed with error: ' + error)
-    # Đóng kết nối SSH
-    client.close()
-
-def execute_remote_command_dr(jump_hook,remote_hook, command):
-    jump_conn = jump_hook.get_conn()
-    transport = jump_conn.get_transport()
-    # Thực hiện kết nối SSH từ jump host đến remote host
-    remote_conn = transport.open_channel("direct-tcpip", (remote_hook.remote_host, remote_hook.port), (jump_hook.remote_host, jump_hook.port))
-    # Sử dụng paramiko để thực hiện lệnh từ xa trên remote host
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    private_key = paramiko.RSAKey.from_private_key_file('/opt/airflow/config/id_rsa')
-    client.connect(hostname=remote_hook.remote_host, port=remote_hook.port, username=remote_hook.username, pkey=private_key, sock=remote_conn)
-    stdin, stdout, stderr = client.exec_command(command)
-    error = stderr.read().decode().strip()
-    print("ERROR:", error)
-    # if error:
-    #     raise ValueError('Remote task failed with error: ' + error)
-    # Đóng kết nối SSH
-    client.close()
-
-def execute_remote_command_dr_koipay(jump_hook,remote_hook, command):
-    jump_conn = jump_hook.get_conn()
-    transport = jump_conn.get_transport()
-    # Thực hiện kết nối SSH từ jump host đến remote host
-    remote_conn = transport.open_channel("direct-tcpip", (remote_hook.remote_host, remote_hook.port), (jump_hook.remote_host, jump_hook.port))
-    # Sử dụng paramiko để thực hiện lệnh từ xa trên remote host
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    private_key = paramiko.RSAKey.from_private_key_file('/opt/airflow/config/id_rsa_koipay')
-    client.connect(hostname=remote_hook.remote_host, port=remote_hook.port, username=remote_hook.username, pkey=private_key, sock=remote_conn)
-    stdin, stdout, stderr = client.exec_command(command)
-    error = stderr.read().decode().strip()
-    print("ERROR:", error)
-    # if error:
-    #     raise ValueError('Remote task failed with error: ' + error)
-    # Đóng kết nối SSH
-    client.close()
 ```
 
 Module notify

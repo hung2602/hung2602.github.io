@@ -85,6 +85,9 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
-search:
-  enabled: true
+  -
+tipue_search:
+  include:
+    pages: true
+  exclude:
+    files: [search.html]

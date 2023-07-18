@@ -7,7 +7,7 @@ title: Kết nối nhiều session RDP trên windows server 2019 cùng 1 lúc
 
 ### Download RDP wapper về máy
 Link driver
-> https://drive.google.com/drive/folders/13tZPIuJOJBqaobeWv7Kn07rWwe_gmGtq?usp=sharing 
+> https://drive.google.com/drive/folders/13tZPIuJOJBqaobeWv7Kn07rWwe_gmGtq?usp=sharing
 
 
 ### Bước 1: Chạy file install sau khi đã giải nén.

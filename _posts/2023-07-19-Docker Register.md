@@ -9,7 +9,7 @@ Thay địa chỉ host 10.0.9.65 thành host registry của bạn nhé.
 </aside>
 
 ### File docker-compose.yml
-[docker-compose.yml](/file/airflow/docker-compose.yml)
+[docker-compose.yml](/file/docker-registry/docker-compose.yml)
 ```
 version: '3.3'
 services:
@@ -57,7 +57,7 @@ Phần registry-ui là dashboard hiển thị các images có trong registry kh�
 
 ### Trước khi run docker compose cần tạo certs và user password cho registry
 Run script sau là xong rồi đó
-[docker-compose.yml](/file/airflow/cli.sh)
+[docker-compose.yml](/file/docker-registry/cli.sh)
 ```
 #!/bin/bash
 USER="admin"

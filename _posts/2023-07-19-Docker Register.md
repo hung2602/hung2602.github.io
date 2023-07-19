@@ -58,7 +58,7 @@ Phần registry-ui là dashboard hiển thị các images có trong registry kh�
 ### Trước khi run docker compose cần tạo certs và user password cho registry
 Run script sau là xong rồi đó
 
-[docker-compose.yml](/file/docker-registry/cli.sh)
+[cli.sh](/file/docker-registry/cli.sh)
 
 ```
 #!/bin/bash

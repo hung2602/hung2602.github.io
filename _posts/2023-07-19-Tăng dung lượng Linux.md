@@ -2,6 +2,8 @@
 layout: post
 title: Tăng dung lượng ổ đĩa cho Linux
 ---
+## Trước tiên cần thêm dung lượng ổ đĩa vật lý do server
+## Sau khi đã tăng thêm dung lượng vật lý thì tiếp theo sẽ cần chọn phân vùng cần tăng
 ### Tăng disk linux
 #### Ở đây ta sẽ tăng thêm dung lượng cho ubuntu--vg-ubuntu--lv đang là 48G thành 98G
 

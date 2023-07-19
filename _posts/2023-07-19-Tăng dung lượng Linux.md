@@ -92,6 +92,7 @@ sr0                        11:0    1   1.3G  0 rom
 
 - show logical volume \
 root@proxy:~# lvdisplay
+
 ```
 --- Logical volume ---
 LV Path                /dev/ubuntu-vg/ubuntu-lv
@@ -128,6 +129,7 @@ centos 7 su dung
 
 - Kết quả \
 root@proxy:~# lsblk
+
 ```
 NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 loop0                       7:0    0 116.8M  1 loop /snap/core/14784
@@ -147,6 +149,7 @@ sda                         8:0    0   100G  0 disk
 ```
 
 root@proxy:~# df -h
+
 ```
 Filesystem                         Size  Used Avail Use% Mounted on
 udev                               3.9G     0  3.9G   0% /dev

@@ -115,3 +115,11 @@ def send_telegram(dag,dag_id):
         dag=dag
     )
 ```
+
+Sau khi cấu hình xong trên dashboard sẽ hiển thị như sau:
+
+![images](/images/airflow-sandbox.png )
+
+Khi này tất cả thông tin về job chạy thành công hay thất bại đều được hiển thị 1 cách rõ ràng và có cả logs để xem.
+
+![images](/images/airflow-logs.png )

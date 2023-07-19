@@ -92,7 +92,7 @@ docker volume create --name=docker-registry && \
 docker-compose up -d
 
 ```
-> Thay USER PASS thành cái user và password cần đặt.
+> Thay USER PASS thành user và password cần đặt.
 
 ### Dưới đây là các lệnh sử dụng registry
 

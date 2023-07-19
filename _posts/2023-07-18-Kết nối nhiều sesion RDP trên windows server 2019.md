@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Blog 9] Kết nối nhiều session RDP trên windows server 2019 cùng 1 lúc
+title: 9 - Kết nối nhiều session RDP trên windows server 2019 cùng 1 lúc
 ---
 
 # Sử dụng tool RDP wrapper

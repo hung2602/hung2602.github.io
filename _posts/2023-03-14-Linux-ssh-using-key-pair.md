@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Blog 7] Linux ssh using ssh-key-pair and turn off ssh password
+title: 7 - Linux ssh using ssh-key-pair and turn off ssh password
 ---
 
 # Add config sshd ( turn off ssh password)

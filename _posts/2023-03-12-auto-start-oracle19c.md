@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Blog 6] Auto start oracle19c  when server restart ( Step by step )
+title: 6 - Auto start oracle19c  when server restart ( Step by step )
 ---
 
 # Step01: Allow service

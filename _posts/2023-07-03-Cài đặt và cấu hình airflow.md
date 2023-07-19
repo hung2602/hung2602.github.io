@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Blog 8] Cài đặt và cấu hình airflow (quản lý jobs tập trung)
+title: 8 - Cài đặt và cấu hình airflow (quản lý jobs tập trung)
 ---
 ### 1.File docker-compose.yml 
 [docker-compose.yml](/file/airflow/docker-compose.yml)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Blog 5] Reset Password Grafana
+title: 5 - Reset Password Grafana
 ---
 
 docker exec -u 0 -it [DOCKERID] bash

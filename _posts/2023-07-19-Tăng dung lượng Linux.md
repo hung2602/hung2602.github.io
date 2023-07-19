@@ -28,6 +28,7 @@ sr0                        11:0    1   1.3G  0 rom
 #### Step01 :
 root@proxy:~# fdisk /dev/sda 
 - Xoa partition sda3
+
 ```
 Command (m for help):p
 Device       Start       End   Sectors Size Type
@@ -41,6 +42,7 @@ Partition 3 has been deleted
 ```
 
 - Tạo lại partition sda3 để default sẽ nhận toàn bộ dung lượng còn trống chưa sử dụng của /dev/sda
+
 ```
 Command (m for help): n
 Partition number (3-128, default 3): 
@@ -54,6 +56,7 @@ Do you want to remove the signature? [Y]es/[N]o: n
 ```
 
 - Kiểm tra lại xem đã nhận đủ dung lượng chưa
+
 ```
 Command (m for help): p
 Device       Start       End   Sectors Size Type
@@ -66,6 +69,7 @@ Command (m for help): w
 Command (m for help): q
 ```
 - Kiểm tra lại
+
 ```
 root@proxy:~# lsblk
 NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT

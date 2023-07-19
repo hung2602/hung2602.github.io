@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3 - Gen Chat_id Telegram
+title: 2 - Gen Chat_id Telegram
 ---
 
 #### URL:

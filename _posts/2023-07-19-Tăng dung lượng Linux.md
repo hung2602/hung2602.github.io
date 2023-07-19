@@ -14,7 +14,7 @@ loop0                       7:0    0 116.8M  1 loop /snap/core/14784
 loop1                       7:1    0 116.8M  1 loop /snap/core/14946
 loop3                       7:3    0  63.3M  1 loop /snap/core20/1852
 loop4                       7:4    0  91.9M  1 loop /snap/lxd/24061
-loop5                       7:5    0  67.8M  1 loop /snap/lxd/22753
+loop5                      7:5    0  67.8M  1 loop /snap/lxd/22753
 loop6                       7:6    0  53.2M  1 loop /snap/snapd/18933
 loop7                       7:7    0  63.3M  1 loop /snap/core20/1879
 loop8                       7:8    0   4.2M  1 loop /snap/tree/18

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2 - Auto backup data postgresql and restore data
+title: 4 - Auto backup data postgresql and restore data
 ---
 # Backup data postgresql
 

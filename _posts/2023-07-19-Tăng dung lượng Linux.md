@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tăng dung lượng ổ đĩa cho Linux
+title: [Blog 10] Tăng dung lượng ổ đĩa cho Linux
 ---
 ## Trước tiên cần thêm dung lượng ổ đĩa vật lý do server
 ## Sau khi đã tăng thêm dung lượng vật lý thì tiếp theo sẽ cần chọn phân vùng cần tăng

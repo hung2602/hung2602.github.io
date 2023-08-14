@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1 - Backup and Restore Gitlab
+title: 12 - Backup and Restore Gitlab
 ---
 ## Backup Gitlab
 

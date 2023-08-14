@@ -120,14 +120,14 @@ Read ahead sectors     auto
 > pvresize /dev/sda2
 
 #### Tăng 100% dung lượng còn trống cho lvm /dev/ubuntu-vg/ubuntu-lv
-> lvextend -l +100%FREE /dev/centos/root
+> lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
 
 #### Bước cuối cùng là resize lại file system sử dụng resize2fs
 ubuntu su dung
-> resize2fs /dev/centos/root
+> resize2fs /dev/ubuntu-vg/ubuntu-lv
 
 centos 7 su dung
->xfs_growfs /dev/centos/root
+>xfs_growfs /dev/ubuntu-vg/ubuntu-lv
 
 - Kết quả \
 root@proxy:~# lsblk

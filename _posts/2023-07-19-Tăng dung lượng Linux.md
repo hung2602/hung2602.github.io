@@ -30,12 +30,14 @@ root@ubuntu-84:~/client_api# pvs
   PV         VG        Fmt  Attr PSize   PFree 
   /dev/sda3  ubuntu-vg lvm2 a--  <48.00g 24.00g
 ```
+
 - grow cho partition
 ```
 root@ubuntu-84:~/client_api# growpart /dev/sda 3
 
 CHANGED: partition=3 start=4198400 old: size=100657152 end=104855552 new: size=310374367 end=314572767
 ```
+
 - Kiểm tra lại
 
 ```

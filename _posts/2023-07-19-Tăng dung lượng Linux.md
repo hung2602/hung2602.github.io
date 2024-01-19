@@ -8,7 +8,7 @@ title: 10 - Tăng dung lượng ổ đĩa cho Linux
 #### Ở đây ta sẽ tăng thêm dung lượng cho ubuntu--vg-ubuntu--lv đang là 14G thành 148G
 
 ```
-root@ubuntu-84:~/client_api# lsblk
+root@ubuntu-84:~# lsblk
 NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 loop0                       7:0    0  63.3M  1 loop /snap/core20/1822
 loop1                       7:1    0  63.9M  1 loop /snap/core20/2105
@@ -27,7 +27,7 @@ sr0                        11:0    1   1.8G  0 rom
 - show physical volumes
 
 ```
-root@ubuntu-84:~/client_api# pvs
+root@ubuntu-84:~# pvs
   PV         VG        Fmt  Attr PSize   PFree 
   /dev/sda3  ubuntu-vg lvm2 a--  <48.00g 24.00g
 ```
@@ -35,7 +35,7 @@ root@ubuntu-84:~/client_api# pvs
 - grow cho partition
 
 ```
-root@ubuntu-84:~/client_api# growpart /dev/sda 3
+root@ubuntu-84:~# growpart /dev/sda 3
 
 CHANGED: partition=3 start=4198400 old: size=100657152 end=104855552 new: size=310374367 end=314572767
 ```
@@ -43,7 +43,7 @@ CHANGED: partition=3 start=4198400 old: size=100657152 end=104855552 new: size=3
 - Kiểm tra lại
 
 ```
-root@ubuntu-84:~/client_api# lsblk
+root@ubuntu-84:~# lsblk
 NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 loop0                       7:0    0  63.3M  1 loop /snap/core20/1822
 loop1                       7:1    0  63.9M  1 loop /snap/core20/2105
@@ -62,7 +62,7 @@ sr0                        11:0    1   1.8G  0 rom
 root@proxy:~# lvdisplay
 
 ```
-root@ubuntu-84:~/client_api# lvdisplay
+root@ubuntu-84:~# lvdisplay
   --- Logical volume ---
   LV Path                /dev/ubuntu-vg/ubuntu-lv
   LV Name                ubuntu-lv
@@ -100,7 +100,7 @@ centos 7 su dung
 root@proxy:~# lsblk
 
 ```
-root@ubuntu-84:~/client_api# lsblk
+root@ubuntu-84:~# lsblk
 NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 loop0                       7:0    0  63.3M  1 loop /snap/core20/1822
 loop1                       7:1    0  63.9M  1 loop /snap/core20/2105

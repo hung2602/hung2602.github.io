@@ -96,8 +96,7 @@ ubuntu su dung
 centos 7 su dung
 >xfs_growfs /dev/ubuntu-vg/ubuntu-lv
 
-- Kết quả \
-root@proxy:~# lsblk
+- Kết quả 
 
 ```
 root@ubuntu-84:~# lsblk

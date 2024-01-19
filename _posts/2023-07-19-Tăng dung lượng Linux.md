@@ -25,6 +25,7 @@ sr0                        11:0    1   1.8G  0 rom
 
 #### Step01 :
 - show physical volumes
+
 ```
 root@ubuntu-84:~/client_api# pvs
   PV         VG        Fmt  Attr PSize   PFree 
@@ -32,6 +33,7 @@ root@ubuntu-84:~/client_api# pvs
 ```
 
 - grow cho partition
+
 ```
 root@ubuntu-84:~/client_api# growpart /dev/sda 3
 
@@ -77,7 +79,6 @@ root@ubuntu-84:~/client_api# lvdisplay
   Read ahead sectors     auto
   - currently set to     256
   Block device           253:0
-
 ```
 
 #### Tăng size logical volume /dev/ubuntu-vg/ubuntu-lv

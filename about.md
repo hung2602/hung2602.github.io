@@ -8,7 +8,7 @@ Welcome to my blog
 
 ### More Information
 
-I'm currently working as a System Admin
+I'm currently working as a DevOps
 
 ### Contact me
 

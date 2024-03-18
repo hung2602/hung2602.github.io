@@ -5,7 +5,7 @@ title: 11 - Cài đặt docker registry để lưu trữ images nội bộ
 ## Sử dụng docker-compose 
 
 <aside class="warning">
-Thay địa chỉ host 10.0.9.65 thành host registry của bạn nhé.
+Thay địa chỉ host 10.0.9.65 thành host registry đang dùng.
 </aside>
 
 ### File docker-compose.yml
@@ -56,7 +56,7 @@ volumes:
 Phần registry-ui là dashboard hiển thị các images có trong registry không cần thì có thể command lại.
 
 ### Trước khi run docker compose cần tạo certs và user password cho registry
-Run script sau là xong rồi đó
+Gen cert
 
 [cli.sh](/file/docker-registry/cli.sh)
 
